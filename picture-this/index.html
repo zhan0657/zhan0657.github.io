@@ -17,16 +17,19 @@
     </div>
     <div>
       <picture>
-        <source media="(max-width:325px)" 
-                srcset="images/museum-325_x_183.jpg">
         <source media="(max-width:960px)" 
-                srcset="images/museum-960_x_540.jpg">
+                srcset="images/museum-480.jpg 480w,
+                images/museum-640.jpg 640w,
+                images/museum-960.jpg 960w,
+                images/museum-1280.jpg 1280w,
+                images/museum-1920.jpg 1920w">
         <source media="(min-width:960px)" 
-                srcset="images/museum-960_x_960.jpg">
-        <source media="(min-width:1280px)" 
-                srcset="images/museum-1280_x_1280.jpg">
-        <source media="(min-width:1440px)" 
-                srcset="images/museum-1440_x_1440.jpg">
+                srcset="images/museum-960x960.jpg 960w,
+                images/museum-1280x1280.jpg 1280w,
+                images/museum-1920x1920.jpg 1920w"
+
+                sizes="50vw">
+  
         <img src="images/museum.jpg"  alt="museum">
       </picture>
     </div>
