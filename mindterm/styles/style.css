@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css reset above */
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #3C3B3A;
+}
+/* 
+** common style starts (mobile first!)
+** it includes nav, title, text, banner image, button, and footer
+*/
+/* common nav starts */
+.nav {
+    height: 225px;
+    background-color: #3C3B3A;
+    text-align: center;
+}
+.nav img {
+    width: 88px;
+    margin-top: 16px;
+}
+nav ul li {
+    list-style-type: none;
+    line-height: 32px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* nav animated by enlarging the font weight! */
+nav ul li:hover,
+nav ul li a:active,
+.current a:visited {
+    font-weight: 700;
+}
+/* common nav ends */
+/* common title, text, banner image, button start */
+h2,h3,p {
+    margin: 15px 36px;
+}
+h1 {
+    margin: 25px 36px;
+    line-height: 45px;
+    font-weight: 700;
+    font-size: 40px;
+}
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+}
+h3 {
+    font-size: 24px;
+    color: #26A682;
+    font-weight: 400;
+}
+p {
+    line-height: 35px;
+}
+header p {
+    font-size: 20px;
+}
+.content p {
+    font-size: 16px;
+}
+.feature img{
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+.button {
+    background-color: #26A682;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+/* buttons and 'back to top' animated by changing scale when hover */
+.button:hover,
+.back-to-top:hover {
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* common title, text, banner image, button end */
+/* common footer starts */
+/* Grid 3 columns used to align social-icon div and back-to-top div */
+footer {
+    height: 125px;
+    background-color: #3C3B3A;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 2.5fr 1fr;
+}
+footer div:nth-child(1) {
+    grid-column: 2;
+}
+/* Flex used to align social icons */
+.icons {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 0 0;
+}
+.icons img {
+    width: 25px;
+    padding: 7px;
+}
+.back-to-top img{
+    width: 22px;
+}
+footer h3,
+footer p {
+    color: white;
+}
+footer h3 {
+    margin: 0; 
+    line-height: 20px;
+}
+footer p {
+    margin: 6px;
+    font-size: 9px;
+    line-height: 0;
+}
+/* common footer ends */
+/* 
+** common style ends 
+*/
+
+/* 
+** home page style starts 
+*/
+.home.content img,picture {
+    width: 100%;
+    margin: 15px auto;
+}
+/* Grid 2x2 used for black icons */
+.activity {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 18px;
+}
+.activity img {
+    width: 39px;
+    margin: auto;
+    display: block;
+}
+.activity p {
+    font-size: 17px;
+    color: #26A682;
+    margin: 0;
+}
+header .button {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 25px auto;
+    width: 300px;
+}
+.scroll p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+}
+.scroll img {
+    width: 26px;
+    transform: scaleY(-1);
+    margin: auto;
+    display: block;
+}
+/* Float right used for 2 buttons */
+.home.content .button {
+    line-height: 45px;
+    margin-bottom: 40px;
+    margin-right: 36px;
+    float: right;
+    overflow: auto;
+    width: 45%;
+}
+footer,.home .section-2 {
+    clear: both;
+}
+.home .section-2 {
+    background-color: #3C3B3A;
+    color: white;
+    padding: 35px 0;
+}
+/* use border-radius to round image */
+.home .section-2 img {
+    width: 175px;
+    border-radius: 50%;
+    border: solid white 4px;
+    display: block;
+}
+.home .section-2 img+p {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+.home .section-3 img {
+    margin-top: 0;
+}
+/*
+** home page style ends
+*/
+
+/*
+** About page style starts
+*/
+.header.about img {
+    margin: 30px auto;
+}
+.about .title {
+    background-size: 100%;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.about .title h1 {
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    margin: 0;
+}
+.about .section-1,
+.about .bg {
+    background-color: #F2F2F2;
+}
+/* mobile size background images used for 2 titles*/
+.about .section-1 .title {
+    background-image: url("../images/about-mobile.jpg");
+}
+.about .section-2 .title {
+    background-image: url("../images/services-mobile.jpg");
+}
+.subscribe {
+    background-color :#3C3B3A;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe p {
+    color: white;
+    font-size: 18px;
+    font-weight:600;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 0px;
+}
+.about.content .button {
+    margin: auto;
+    line-height: 35px;
+    width: 150px;
+}
+.about .flex div {
+    padding: 3px 0;
+}
+.about .flex picture {
+    display: none;
+}
+.about .section-4 h1 {
+    font-size: 56px;
+    line-height: 65px;
+    text-align: center;
+    margin: 40px;
+}
+.sponsor-logo {
+    margin: 50px auto;
+}
+.sponsor-logo img {
+    padding: 30px;
+    margin: auto;
+    display: block;
+}
+.sponsor-logo img:nth-child(1) {
+    width: 70%;
+}
+.sponsor-logo img:nth-child(2),
+.sponsor-logo img:nth-child(3),
+.sponsor-logo img:nth-child(4) {
+    width: 205px;
+}
+/*
+** About page style ends
+*/
+
+/*
+** Contact page style starts
+*/
+.form {
+    background-color: #26A682;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 30px; 
+    padding: 25px 25px 10px 25px;
+    margin: 40px 36px;
+}
+.form h1,
+.form p {
+    color: white;
+}
+.form h1 {
+    margin: 8px 5px;
+}
+.form p {
+    margin: 0;
+    font-size: 18px;
+}
+fieldset {
+    margin-top: 12px;
+}
+.form input,textarea {
+    font-size: 16px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 0;
+    height: 40px;
+    border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-indent: 20px;
+}
+textarea {
+    height: 100px;
+    border-radius: 12px; 
+    line-height: 30px;
+}
+.form .button {
+    width: 100%;
+    background-color: #3C3B3A;
+}
+.location {
+    margin: 80px auto;
+}
+.contact h3 {
+    color: #3C3B3A;
+    line-height: 30px;
+}
+iframe {
+    width: 100%;
+}
+/*
+** Contact page style ends
+*/
+
+ /* 
+ ** Media Query for Tablet 
+ */
+@media (min-width:768px) {
+    /* 
+    ** common style starts
+    ** it includes nav, title, text
+    */
+    /* common nav starts */
+    .nav {
+        height: 75px;
+        padding: 0 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav img {
+        margin: 0;
+    }
+    nav ul  li {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+    }
+    /* common nav ends */
+    /* common title, text start */
+    h2,h3,p {
+        margin: 15px 80px;
+    }
+    h1 {
+        margin: 60px 80px 20px 80px;
+        line-height: 80px;
+        font-size: 72px;
+    }
+    h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    p {
+        line-height: 35px;
+    }
+    header p {
+        font-size: 24px;
+    }
+    .content p {
+        font-size: 18px;
+    }
+    /* common title, text end */
+    /* 
+    ** common style ends 
+    */
+
+    /* 
+    ** home page style starts 
+    */
+    .home .feature img {
+        width: 350px;
+        padding: 20px;
+    }
+    /* Flex used to align black icons */
+    .activity {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 80px;
+    }
+    .activity img {
+        width: 39px;
+    }
+    .home.content .button {
+        margin-right: 80px;
+        width: 230px;
+    }
+    /* Flex used to make 2 columns */
+    .home .section-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .section-2 div {
+        flex: 1 2;
+    }
+    .home .section-2 div:nth-child(2) p {
+        margin-left: 0;
+        line-height: 40px;
+    }
+    /* 
+    ** home page style ends 
+    */
+
+    /* 
+    ** about page style starts 
+    */
+    .about .feature img {
+        width: 574px; 
+    }
+    /* tablet size background images used for 2 titles*/
+    .about .section-1 .title {
+        background-image: url("../images/about-tablet.jpg");
+    }
+    .about .section-2 .title {
+        background-image: url("../images/services-tablet.jpg");
+    }
+    .about .section-1 .flex {
+       padding: 30px 0;
+    }
+    .about .flex picture {
+        display: block;
+    }
+    .about .flex img {
+        width: 100%;
+    }
+     /* Flex used to make 2 columns for images and texts*/
+    .about .section-2 .flex,
+    .about .section-3 .flex { 
+        height: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .about .text-1,
+    .about .text-2 {
+        flex-basis: 80%;
+    }
+    .about .image-1 {
+        margin-left: 80px;
+   }
+    .about .image-2 {
+        margin-right: 80px;
+    }
+    .about .text-1 p,
+    .about .text-1 h2,
+    .about .text-1 h3 {
+        margin-left: 6%;
+    }
+    .about .text-2 p,
+    .about .text-2 h2,
+    .about .text-2 h3 {
+        margin-right: 6%;
+    }
+    .subscribe {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 75px;
+        padding: 0 80px;
+    }
+    .subscribe p {
+        font-size: 24px;
+        margin: 0;
+    }
+    .subscribe .button {
+        font-size: 24px;
+    }
+    .sponsor-logo img:nth-child(1) {
+        width: 435px;
+    }
+    /*
+    ** about page style ends 
+    */
+
+    /*
+    ** contact page style starts 
+    */
+    .header.contact img {
+        width: 452px;
+    }
+    .form {
+        width: 608px;
+        margin: 50px auto;
+    }
+    .form .button {
+        width: 40%;
+        float: right;
+    }
+    .form p {
+        font-size: 22px;
+        line-height: 45px;
+    }
+    /*
+    ** contact page style ends 
+    */
+}
+
+ /* 
+ ** Media Query for Desktop 
+ */
+@media (min-width:1200px) {
+    /* 
+    ** common style starts
+    ** it includes nav, title, text
+    */
+    .nav {
+       padding: 0 140px;
+    }
+    h1,h2,h3,p {
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        margin-bottom: 30px;
+    }
+    .header {
+        margin: 140px 140px 30px 140px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .content p,
+    .content h2,
+    .content h3 {
+        padding:4px 0;
+    }
+    /*
+    ** common style ends 
+    */
+
+    /* 
+    ** home page style starts 
+    */
+    /* Flex used to make 2 columns for banner texts and image*/
+    .header.home>div:nth-child(1) {
+        flex: 0 0 35%;
+    }
+    .activity {
+        padding: 0;
+        margin:40px 0;
+    }
+    .header.home .feature img{
+        width: 85%;
+        margin-top: -40px;
+        padding: 0 80px 0 15%;
+    }
+    header .button {
+        margin-left: 0;
+    }
+    /* Flex used to make 2 columns for main contents*/
+    .home .section-1,
+    .home .section-3 {
+        display: flex;
+        flex-direction: row;
+        background-color: #F2F2F2;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        padding:0 140px;
+    }
+    .home .section-1>div:nth-child(1) {
+        flex: 0 0 45%;
+        padding-right: 30px;
+    }
+    .home.content .button {
+        margin: 0;
+    }
+    .scroll{
+        margin-bottom: 40px;
+    }
+    .home .section-2 {
+        height: 300px;
+        padding: 0 140px;
+        margin: 0;
+    }
+    .home .section-2 img {
+        margin: 0;
+    }
+    .home .section-2 p {
+        margin-left: 15%;
+    }
+    .home .section-2 div:nth-child(1) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .home .section-3>div:nth-child(1) {
+        flex: 0 0 45%;
+        padding-left: 30px;
+        order: 2;
+    }
+    /*
+    ** home page style ends 
+    */
+
+    /* 
+    ** about page style starts 
+    */
+    /* Flex used to make 2 columns for banner texts and image */
+    .header.about>div:nth-child(1) {
+        flex: 0 0 50%;
+    }
+    .header.about .feature img {
+        width: 90%;
+        margin: 0;
+        padding-left: 80px;
+    }
+    /* desktop size background images used for 2 titles */
+    .about .section-1 .title {
+        background-image: url("../images/about-desktop.jpg");
+    }
+    .about .section-2 .title {
+        background-image: url("../images/services-desktop.jpg");
+    }
+    .header.about {
+        margin-bottom: 100px;
+    }
+    .header.about h1+p{
+        margin-bottom: 35px;
+    }
+    /* Flex used to make 3 columns for texts */
+    .about .section-1 .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .about .section-1 .flex div {
+        flex: 0 0 30%; 
+        padding: 100px 0;
+    }
+    .about.content .flex {
+        padding: 0px 140px;
+    }
+    .about .image-1, 
+    .about .image-2 {
+        margin: 0px;
+    }
+    .subscribe {
+       height: 100px;
+       justify-content: center;
+    }
+    .subscribe div {
+       margin: 0 20px;
+    }
+    .about .section-4 {
+        margin: 100px 140px;
+    }
+    .about .section-4 h1 {
+        width: 30%;
+        margin: auto;
+    }
+    /* Flex used to align sponsor logos */
+    .section-4 .sponsor-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section-4 .sponsor-logo img {
+        margin: 0;
+    }
+    .sponsor-logo img:nth-child(1) {
+        width: 20%;
+    }
+    .sponsor-logo img:nth-child(2),
+    .sponsor-logo img:nth-child(3),
+    .sponsor-logo img:nth-child(4) {
+        width: 100px;
+    }
+    /* 
+    ** about page style ends 
+    */
+
+    /*
+    ** contanct  page style starts 
+    */
+    .header.contact {
+        padding: 0;
+        margin-bottom: 120px;
+    }
+    .form,.location {
+        margin: 0;
+    }
+    .contact .feature img {
+        margin: auto;
+        width: 80%;
+        padding-top: 40px;
+    }
+    /* Flex used to make 2 columns for texts and form */
+    .contact>div:nth-child(1) {
+        flex: 0 0 55%;
+        padding-right: 40px;
+    }
+    /* Flex used to make 2 columns for texts and google map */
+    .contact.content {
+        padding: 0 140px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .map {
+        width: 100%;
+    }
+    /* 
+    ** contanct page style ends 
+    */
+}
+   
