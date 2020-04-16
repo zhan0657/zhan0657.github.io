@@ -1,0 +1,865 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css reset above */
+
+
+
+
+/* two google fonts used, one for titles and one for texts*/
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #3C3B3A;
+}
+.container{
+    width:90%;
+    margin:auto;
+}
+/* 
+** common style starts (mobile first!)
+** it includes title, text, nav, banner, button, footer and basic flex and grid setting (including elements in these two classes)
+*/
+/* common title and text start */
+body h1,
+body h2,
+body h3 {
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    color: white;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+}
+h2 {
+    font-size: 1.8rem;
+    padding: 3.5rem 0;
+    color: #595958;
+}
+p {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.intro{
+    padding-bottom: 3.5rem;
+}
+span{
+    color: #EFAA1F;
+}
+/* common title and text end */
+
+/* common logo and nav start */
+header img {
+    width: 10rem;
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+}
+/* create hamburger nav icon (used in mobile version) */
+.bar div {
+    width: 35px;
+    height: 5px;
+    background-color: #595958;
+    margin: 5px auto;
+}
+.nav #myLinks {
+    display: none;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.nav a {
+    color: #595958;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+.nav a:hover {
+    color: #EFAA1F;
+}
+.current {
+    font-weight: 700;
+}
+/* common logo and nav end */
+
+/* common banner starts */
+.banner {
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 380px;
+    position: relative;
+}
+.banner .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1+div div {
+    margin-bottom: 1.2rem;
+}
+.banner .button, 
+.grid a {
+    font-size: 1.5rem;
+}
+.banner .button,
+.more-button {
+    display:block;
+    margin:auto;
+}
+/* common banner ends */
+
+/* common button starts */
+.button {
+    background-color: #EFAA1F;
+    width: 10rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px 2rem;
+    cursor: pointer;
+}
+.button:hover {
+    color: #595958;
+}
+.more-button {
+    color: #595958;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+.more-button:hover {
+    color: white;
+}
+.main .grid .button {
+    opacity: 80%;
+}
+.top {
+    display: block;
+    text-align: center;
+    color: #595958;
+    margin: 5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+/* common button ends */
+
+/* common footer starts */
+footer {
+    text-align: center;
+    background-color: #595958;
+    color: white;
+    line-height: 2rem;
+}
+footer img { 
+    width: 25px;
+    color: #EFAA1F;
+}
+h3 {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    color: #EFAA1F;
+    line-height: 2rem;
+}
+.footer {
+    flex-direction: column;
+    padding-top: 2rem;
+}
+.footer div {
+    margin-bottom: 2rem;
+}
+.icons {
+    justify-content: center;
+}
+.icons a {
+    margin: 0 20px;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+.copyright {
+    font-size: 10px;
+    padding: 1rem;
+    color: #9B9B9B;
+}
+/* common footer ends*/
+
+/* common basic flex and grid setting start (including elements in these two classes) */
+/* grid and flex effect mainly show on tablet and desktop versions */
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+.grid div {
+    overflow: hidden;
+}
+.main .grid {
+    width: 80%;
+    margin: auto;
+}
+.main .grid div {
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+.main .grid div a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* change scale and grayscale on photos when hover */
+.filter {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 3s;
+}
+.filter:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+/* common basic flex and grid setting end (including elements in these two classes) */
+/* 
+** common style ends 
+*/
+
+/* 
+** home page starts 
+*/
+.home-banner {
+    background-image: url("../images/home-banner.jpg");
+}
+.section-1 img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.home-main .section-2,
+.about-main .section-2 {
+    background-color: #595958;
+    color: white;
+}
+.section-2 h2 {
+    color: white;
+}
+/* flex column used for mobile and tablet version */
+.section-1 .flex,
+.section-2 .flex {
+    flex-direction: column;
+}
+.section-2 .flex p:nth-child(2) {
+    padding-bottom: 3.5rem;
+}
+.card {
+    margin: auto;
+}
+.card img {
+    width: 7rem;
+    padding: 2rem;
+    border: 5px solid #EFAA1F;
+}
+.card .button {
+    display: block;
+    width: 186px;
+    padding: 12px 0 12px 0;
+    margin: -5px 0 0 0;
+}
+.card a {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    color: #595958;
+}
+.section-2 .flex>p {
+    text-align: center;
+    color: #EFAA1F;
+    line-height: 2.5rem;
+}
+.section-2 .flex .intro { 
+    margin-top: 3.5rem;
+}
+/* this is a dotted line */
+hr {
+    border: 1px dashed #EFAA1F;
+    margin-bottom: 4rem;
+}
+/* 
+** home page ends 
+*/
+/* 
+** about page starts 
+*/
+.about-banner {
+    background-image: url("../images/about-banner.png");
+}
+.about-main .section-1 .intro {
+    padding-bottom: 0;
+}
+.about-main .section-3 {
+    background-color: rgb(230, 230, 230);
+}
+.about-main .section-3 p {
+    width: 80%;
+    font-style: italic;
+    padding: 5rem 0;
+    margin: auto;
+}
+.about-main .section-3 span {
+    text-align: right;
+    display: block;
+}
+.about-main .section-1 .flex {
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.about-main .section-1 .flex div {
+    margin-bottom: 3.5rem;
+}
+.about-main .section-1 .flex p:nth-child(2) {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.about-main .section-1 .flex p:nth-child(3) {
+    color: #EFAA1F;
+    font-weight: 700;
+}
+.about-main .section-1 .flex p:nth-child(4) {
+    font-style: italic;
+}
+/* 
+** about page ends 
+*/
+/* 
+** works page starts 
+*/
+.works-banner {
+    background-image: url("../images/works-banner.png");
+}
+.works-banner .button,
+.graphicdesign-banner .button,
+.websitedesign-banner .button,
+.photography-banner .button,
+.project-banner .button {
+    width: 12rem;
+}
+.graphic,.photography {
+    background-color: #595958;
+}
+.works .container {
+    padding-bottom: 3.5rem;
+}
+.graphic h2,
+.photography h2 {
+    color: white;
+}
+/* 
+** works page ends 
+*/
+/* 
+** contact page starts 
+*/
+.contact-banner {
+    background-image: url("../images/contact-banner.png");
+}
+.contact-main .flex {
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+.contact-main .flex {
+    margin-bottom: 3.5rem;
+}
+.contact-main .flex div:nth-child(1),
+.contact-main .flex div:nth-child(2) {
+    margin-bottom: 2.5rem;
+}
+.contact-main .flex img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+.contact-main .flex p {
+    font-size: 18px;
+}
+.form {
+    background-color: rgb(220, 220, 220);
+    padding: 20px 25px 35px 25px;
+}
+.form p {
+    font-size: 18px;
+}
+fieldset {
+    margin-top: 12px;
+}
+.form input,textarea {
+    font-size: 1rem;
+    width: 100%;
+    border: 0;
+    height: 40px;
+    text-indent: 20px;
+    margin-bottom: 10px;
+}
+textarea {
+    height: 100px;
+    line-height: 30px;
+}
+::placeholder {
+    color: rgb(160, 160, 160);
+}
+.form .button {
+    margin: auto;
+    padding: 14px;
+}
+iframe {
+    width: 100%;
+}
+/*
+** Contact page ends
+*/
+/* 
+** graphicdesign page starts 
+*/
+.graphicdesign-banner {
+    background-image: url("../images/graphicdesign-banner.png");
+}
+.graphic-main .grid,
+.website-main .grid,
+.photography-main .grid {
+    margin-top: 3.5rem;
+}
+/* 
+** websitedesign & photography pages start
+*/
+.websitedesign-banner {
+    background-image: url("../images/websitedesign-banner.png");
+}
+.photography-banner {
+    background-image: url("../images/photography-banner.png");
+}
+/* 
+** project page starts 
+*/
+.project-banner {
+    background-color: #595958;
+    height: 300px;
+}
+.project-main img {
+    width: 100%;
+}
+.project-banner .container div div {
+    margin: 1.5rem auto;
+}
+/*
+** project page ends
+*/
+
+
+
+/* 
+** Media Query for Tablet 
+*/
+@media (min-width:768px) {
+/* 
+** common style starts
+** it includes title, text, nav, banner, button, footer and basic flex and grid settings
+*/
+/* common title and text start */
+    .container {
+        width: 85%;
+    }
+    h1 {
+        font-size: 2.5rem;
+        line-height: 4rem;
+        margin: 2rem 0;
+    }
+    h2 {
+        font-size: 2rem;
+        padding: 5rem 0;
+    }
+    p {
+        font-size: 1.1rem;
+        line-height: 2.2rem;
+    }
+    .intro {
+        padding-bottom: 5rem;
+    }
+    /* common title and text end */
+
+    /* common logo and nav start */
+    header img {
+        width: 12rem;
+        display: inline-block;
+        margin-left: 0;
+        padding: 1rem 0;
+    }
+    /* no hamburger nav in tablet and desktop version) */
+    .nav .bar {
+        display: none;
+    }
+    .nav #myLinks {
+        display: inline-block;
+    }
+    header>.container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav a {
+        margin-top: 7rem;
+        display: inline-block;
+    }
+    /* common logo and nav end */
+
+    /* common banner starts */
+    .banner {
+        height: 420px;
+    }
+    .banner div {
+        display: inline-block;
+        padding: 1rem;
+        text-align: center;
+    }
+    h1+div {
+        margin: auto;
+    }
+    /* common banner ends */
+
+    /* common button starts */
+    .more-button {
+        padding: 1.2rem 2.2rem;
+        margin: 2rem auto 2rem auto;
+    }
+    .main .grid .button {
+        padding: 10px 1rem;
+    }
+    /* common button ends */
+
+    /* common footer starts */
+    footer p {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        padding-top: 3rem;
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 4rem;
+    }
+    .footer div {
+        margin-bottom: 4rem;
+    }
+    /* common footer ends*/
+
+    /* common grid setting start - 2 columns in tablet version */
+    .main .grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 8%;
+    }
+    /* 
+    ** common style ends 
+    */
+
+    /* 
+    ** home page starts 
+    */
+    .flex .flex {
+        width: 80%;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .flex .flex p {
+        text-align: left;
+    }
+    .section-2 .flex .intro {
+        padding-bottom: 3.5rem;
+    }
+    .home-main .section-2 .container,
+    .about-main .section-2 .container {
+        padding-bottom: 4rem;
+    }
+    /* 
+    ** home page ends 
+    */
+    /* 
+    ** about page starts 
+    */
+    .about-main .section-1 .flex {
+        width: 50%;
+    }
+    /* 
+    ** works page starts 
+    */
+    .works-banner .button,
+    .project-banner .button {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        width: 10rem;
+    }
+    .works-banner h1+div,
+    .project-banner h1+div {
+        padding: 0;
+    }
+    /* 
+    ** works page ends 
+    */
+    /* 
+    ** contact page starts 
+    */
+    .contact-main .flex {
+        flex-direction: row;
+        justify-content: space-around;
+        border: solid 2px #EFAA1F;
+        padding: 2rem;
+    }
+    .main.contact-main .flex div {
+        margin: 0;
+    }
+    .form {
+        width: 600px;
+        margin: auto;
+    }
+    /* 
+    ** contact page ends 
+    */
+    /* 
+    ** graphicdesign & websitedesign & photography & project pages start 
+    */
+    .graphic-main .container,
+    .website-main .container,
+    .photography-main .container {
+        margin-top: 8rem;
+    }
+    .graphicdesign-banner,
+    .websitedesign-banner,
+    .photography-banner {
+        height: 380px;
+    }
+    .project-banner {
+        height: 8rem;
+    }
+    .project-banner h1+div div {
+        margin: 0;
+    }
+}
+
+/* 
+** Media Query for Desktop 
+*/
+@media (min-width:1200px) {
+    /* 
+    ** common style starts
+    ** it includes title, text, banner, button, footer and grid settings 
+    */
+    /* common title and text start */
+    .container {
+        width: 1100px;
+    }
+    h1 {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        padding: 6rem 0;
+    }
+    .intro {
+        padding-bottom: 6rem;
+    }
+    /* common title and text end */
+
+    /* common banner */
+    .banner {
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+    }
+    /* common button */
+    .button {
+        width: 11rem;
+        padding: 1rem 2rem;
+    }
+    .top {
+        margin: 8rem;
+    }
+    /* common footer starts */
+    h3 {
+        font-size: 2rem;
+        padding-top: 4rem;
+    }
+    .footer div {
+        margin-bottom: 3rem;
+    }
+    .icons img {
+        width: 1.8rem;
+    }
+    .footer {
+        width: 80%;
+        margin: auto;
+    }
+    .icons {
+        align-items: center;
+    }
+    /* common footer ends*/
+
+    /* common grid setting  - 3 columns in Desktop version */
+    .main .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 6%;
+    }
+    /* 
+    ** common style ends 
+    */
+
+    /* 
+    ** home page starts 
+    */
+    .home-main .section-1 .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: flex-start;
+    }
+    .home-main .section-1 .flex div {
+        padding: 0 2rem;
+    }
+    picture img {
+        padding-top: 10px;
+    }
+    .section-2 .container>.flex {
+        flex-direction: row;
+    }
+    .home-main .section-2 .container,
+    .about-main .section-2 .container {
+        padding-bottom: 6rem;
+    }
+    .card {
+        margin-left: 5rem;
+    }
+    .section-2 .flex .intro {
+        margin-top: 4rem;
+    }
+    .card+div {
+        margin-left: 10%;
+    }
+    hr{
+        margin-bottom: 0rem;
+    }
+    /* 
+    ** home page ends 
+    */
+    /* 
+    ** about page starts 
+    */
+    .main.about-main .section-1 .flex {
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 4rem;
+    }
+    .about-main .section-1 .flex img {
+        width: 60%;
+    }
+    /* 
+    ** about page ends 
+    */
+    /* 
+    ** works page starts 
+    */
+    .works-banner .button,
+    .project-banner .button {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        width: 11rem;
+    }
+    .works-banner h1 {
+        margin-top: 0rem;
+        margin-bottom: 4rem;
+    }
+    /* 
+    ** works page ends 
+    */
+    /* 
+    ** contact page starts 
+    */
+    .contact-main .flex {
+        width:70%;
+    }
+    /* 
+    ** contact page ends 
+    */
+    /* 
+    ** graphicdesign & websitedesign & photography & project pages start 
+    */
+    .graphicdesign-banner,
+    .websitedesign-banner,
+    .photography-banner {
+        height: 400px;
+    }
+    .project-banner {
+        height: 10rem;
+    }
+    .project-main {
+        background-color: #595958;
+    }
+    .project-main img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}     
+    /* 
+    ** Thanks for reviewing my code!
+    ** Have a nice day!
+    */
+    
+    

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- two google fonts used, one for titles and one for texts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:900&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet" >
+    <title>project</title>
+</head>
+<body>
+    <header>
+    <!-- header includes logo&nav div and banner div -->
+        <div class="container">
+        <!-- div for logo and nav -->
+            <img src="images/logo.jpg" alt="logo">
+            <div class="nav">
+                <div class="bar">
+                    <a href="javascript:void(0);"  onclick="myFunction()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </a>
+                </div>
+                <div id="myLinks">
+                <!-- javascript used to make a hamburger nav for mobile version -->
+                    <a href="index.html" target="_blank">Home</a>
+                    <a href="about.html" target="_blank">About</a>
+                    <a class="current" href="works.html" target="_blank">Works</a>
+                    <a href="contact.html" target="_blank">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="banner project-banner">
+            <div class="container">
+               
+                <div>
+                    <div>
+                        <a href="graphicdesign.html" class="button" target="_blank">Graphic Design</a>
+                    </div>              
+                    <div>
+                        <a href="websitedesign.html" class="button" target="_blank">Website Design</a>
+                    </div>
+                    <div>
+                        <a href="photography.html"  class="button" target="_blank">Photography</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main project-main">
+        <img src="images/project-1.jpg" alt="welcome">
+    </div>
+
+    <!-- this is a "back to top" link -->
+    <a href="project.html" class="top">TOP</a>
+
+    <footer>
+    <!-- footer div contains 2 flex divs for contact information and social icons -->
+        <div class="container">
+            <h3>Let us help you achieve the marketing goal!</h3>
+            <div class="flex footer">
+            <!-- This is contact info, flex is used to make 3 groups -->
+                <div>
+                    <img src="images/mail.svg" alt="email">
+                    <p>bstudio@gmail.com</p>
+                </div>
+                <div>
+                    <img src="images/pin.svg" alt="address">
+                    <p>1385 Woodroffe Avenue<br />
+                    Ottawa, Ontario. Canada<br />
+                    K2G 1V8</P>
+                </div>
+                <div>
+                    <img src="images/phone.svg" alt="phone number">
+                    <p><strong>(613)2947300</strong><br />
+                        Mon/Fri 8am-6pm<br />
+                        Sat/Sun 10am-3pm</p>
+                </div>
+            </div>
+            <div class="flex icons">
+                <a href="index.html" target="_blank"><img src="images/facebook.svg" alt="facebook"></a>
+                <a href="index.html" target="_blank"><img src="images/instagram.svg" alt="instagram"></a>
+                <a href="index.html" target="_blank"><img src="images/twitter.svg" alt="twitter"></a>
+                <a href="index.html" target="_blank"><img src="images/youtube.svg" alt="youtube"></a>
+            </div>
+            <p class="copyright">© 2020 B’STUDIO. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- javascript for nav -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+            }
+    </script>
+
+</body>
+</html>

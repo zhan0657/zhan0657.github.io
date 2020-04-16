@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- two google fonts used, one for titles and one for texts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:900&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet" >
+    <title>about us</title>
+</head>
+<body>
+<!-- 3 main sections in body: header / div .about-main / footer -->
+    <header>
+    <!-- header includes logo&nav div and banner div -->
+        <div class="container">
+        <!-- div for logo and nav -->
+            <img src="images/logo.jpg" alt="logo">
+            <div class="nav">
+                <div class="bar">
+                    <a href="javascript:void(0);"  onclick="myFunction()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </a>
+                </div>
+                <div id="myLinks">
+                <!-- javascript used to make a hamburger nav for mobile version -->
+                    <a href="index.html" target="_blank">Home</a>
+                    <a class="current" href="about.html" target="_blank">About</a>
+                    <a href="works.html" target="_blank">Works</a>
+                    <a href="contact.html" target="_blank">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="banner about-banner">
+        <!-- div for banner -->
+            <div class="container">
+            <!-- background image specified in css -->
+                <h1>“ Design is <span>intelligence</span> <br />made visible.”</h1>
+                <div> 
+                    <div>
+                    <!-- 2 buttons on banner leading to specific positions -->
+                        <a href="contact.html#anchor" class="button" target="_blank">Hire Us</a>
+                    </div>
+                    <div>
+                        <a href="#anchor" class="button" target="_blank">Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main about-main">
+    <!-- This div icludes main contents of about page and 
+    divided into 3 main sections with class name for each one -->
+        <div class="section-1 container">
+            <div>
+                <!-- span used for different text color -->
+                <h2>About <span>B’STUDIO</span></h2>
+                <p class="intro">B’STUDIO is an Ottawa (Ontario) based design studio that has been serving clients since 2018. We specialize in graphic design, brand development, web design and photography.<br />
+                    We provide creative, professional and reliable services tailored to the unique needs of our clients. We take pride in the quality of our services and the professional relationships we develop with our clients.<br />
+                    To experience our services first hand, please visit our portfolio section. We look forward to serving you in the future.</p>
+            </div>
+            <div>
+                <h2>Our <span>Designers</span></h2>
+                <div class="flex">
+                <!-- flex column for mobile&tablet and flex row for desktop -->
+                    <div>
+                        <img src="images/about-1.png" alt="Jacky Smith">
+                        <p>Jacky Smith</p>
+                        <p>Website Developer<br />
+                        Photographer</p>
+                        <p>“The best time of life is when I create something.”</p>
+                    </div>
+                    <div>
+                        <img src="images/about-2.png" alt="Linda Davis">
+                        <p>Linda Davis</p>
+                        <p>Graphic designer<br />
+                            Photographer</p>
+                        <p>“The function of design is letting design function.”</p>
+                    </div>
+                    <div>
+                        <img src="images/about-3.png" alt="John Stewart">
+                        <p>John Stewart</p>
+                        <p>Website Developer<br />
+                            Graphic designer</p>
+                        <p>“Make it simple, but significant.”</p>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="anchor" class="section-2">
+            <div class="container">
+                <h2>Our <span>Services</span></h2>
+                <p class="intro">We build and coordinate all of your branding elements into one cohesive marketing plan that is consistent across all media. We research, evaluate, analyze and brainstorm — we work with you to set reasonable and measurable goals, helping you select the advertising services needed to get you results. Our professional photographers can add value to your brand with high-resolution team photos, corporate event photography and product photography. </p>
+                <hr>
+                <div class="flex">
+                <!-- this flex div have 3 different looks in media queries -->
+                    <div class="card">
+                        <img src="images/graphic.svg" alt="B'STUDIO">
+                        <a href="graphicdesign.html" class="button" target="_blank">Graphic Design</a>
+                    </div>
+                    <div>
+                        <p class="intro">Graphic design is much like the third act of magic: the prestige, in which one has to bring something into existence that was previously not there. We not only make you look good but also help you achieve your goals!</p>
+                        <div class="flex">
+                            <p>• LOGO DESIGN<br />          
+                               • CORPORATE IDENTITY<br /> 
+                               • PACKAGING<br />   
+                               • BROCHURE<br /> 
+                               • POSTER
+                            </p>
+                            <p>• POSTCARD<br />                      
+                               • FLYER<br /> 
+                               • HORDING<br /> 
+                               • CATALOGUE<br /> 
+                               • BOOK COVER
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex">
+                    <div class="card">
+                        <img src="images/website.svg" alt="B'STUDIO">
+                        <a href="websitedesign.html" class="button" target="_blank">Website Design</a>
+                    </div>
+                    <div>
+                        <p class="intro">We will help you create a professional  website that reflects your brand and showcases everything you do. With an eye-catching and user-friendly website, you can achieve more than you thought.</p>
+                        <div class="flex">
+                            <p>• LAYOUT DESIGN<br />          
+                               • HTML5 / CSS3<br /> 
+                               • JAVASCRIPT / JQUERY<br />   
+                               • WORDPRESS / PHP
+                            </p>
+                            <p>• SQUARESPACE / SHOPIFY<br />                      
+                               • CUSTOM CMS <br /> 
+                               • WEBSITE MAINTENANCE<br /> 
+                               • BUG FIX
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex">
+                    <div class="card">
+                        <img src="images/Photography.svg" alt="B'STUDIO">
+                        <a href="photography.html" class="button" target="_blank">Photography</a>
+                    </div>
+                    <div>
+                        <p class="intro">Photography plays a major role in promoting and marketing the business, as well as preserving your precious memories. We guarantee high quality photos to meet your multiple needs.</p>
+                        <div class="flex">
+                            <p>• PRODUCT<br />          
+                               • CORPORATE<br /> 
+                               • PORTRAIT<br />   
+                               • WEDDING<br />
+                               • FAMILY EVENT
+                            </p>
+                            <p>• FASHION <br /> 
+                               • REAL ESTATE<br /> 
+                               • AERIAL / DRONE<br /> 
+                               • UNDERWATER
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-3">
+            <div class="container">
+                <p>“A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.”<br /><br>
+                <span>— Antoine de Saint-Exupéry</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- this is a "back to top" link -->
+    <a href="about.html" class="top">TOP</a>
+
+    <footer>
+    <!-- footer div contains 2 flex divs for contact information and social icons -->
+        <div class="container">
+            <h3>Let us help you achieve the marketing goal!</h3>
+            <div class="flex footer">
+            <!-- This is contact info, flex is used to make 3 groups -->
+                <div>
+                    <img src="images/mail.svg" alt="email">
+                    <p>bstudio@gmail.com</p>
+                </div>
+                <div>
+                    <img src="images/pin.svg" alt="address">
+                    <p>1385 Woodroffe Avenue<br />
+                        Ottawa, Ontario. Canada<br />
+                        K2G 1V8</P>
+                </div>
+                <div>
+                    <img src="images/phone.svg" alt="phone number">
+                    <p><strong>(613)2947300</strong><br />
+                        Mon/Fri 8am-6pm<br />
+                        Sat/Sun 10am-3pm</p>
+                </div>
+            </div>
+            <div class="flex icons">
+                <a href="index.html" target="_blank"><img src="images/facebook.svg" alt="facebook"></a>
+                <a href="index.html" target="_blank"><img src="images/instagram.svg" alt="instagram"></a>
+                <a href="index.html" target="_blank"><img src="images/twitter.svg" alt="twitter"></a>
+                <a href="index.html" target="_blank"><img src="images/youtube.svg" alt="youtube"></a>
+            </div>
+            <p class="copyright">© 2020 B’STUDIO. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- javascript for nav -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+                }
+            }
+    </script>
+    
+</body>
+</html>
